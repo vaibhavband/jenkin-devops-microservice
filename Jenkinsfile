@@ -9,10 +9,10 @@ steps {
 sh 'mvn --version'
 echo "Build"
 echo "$PATH"
-echo "BUILD NUMNER $env.BUILD_NUMBER"
+echo "BUILD NUMNER -$env.BUILD_NUMBER"
 echo "$env.BUILD_ID"
 echo "$env.JOB_NAME"
-echo ""$env.JOB_ID""
+echo "$env.BUILD_URL"
 //sh 'node --version'
 echo "build"
 }
