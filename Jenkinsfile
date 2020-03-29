@@ -1,6 +1,6 @@
 pipeline {
-agentany
-stgaes {
+agent any
+stages {
 
 stage('build'){
 steps {
