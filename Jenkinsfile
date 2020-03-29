@@ -12,7 +12,9 @@ stages {
 
 stage('build'){
 steps {
-//sh 'mvn --version'
+sh 'mvn --version'
+sh 'docker version'
+
 echo "Build"
 echo "$PATH"
 echo "BUILD NUMNER -$env.BUILD_NUMBER"
