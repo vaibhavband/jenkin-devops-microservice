@@ -1,9 +1,14 @@
 pipeline {
-//agent any
-agent { docker {
-	label 'windows'
-	image 'maven:3.6.3'}}
+
+  agent {
+    docker {
+      label 'windows'
+      image 'maven:3.6.3'
+    }
+  }
+}
 //agent { docker {image 'node:13.8'}}
+
 stages {
 
 stage('build'){
