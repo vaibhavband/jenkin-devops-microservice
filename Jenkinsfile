@@ -28,12 +28,12 @@ echo "build"
 }
 stage('build') {
 steps {
- bat mvn clean compile 
+ bat "mvn clean compile" 
 }
 }
 stage('Test') {
 steps {
-bat mvn test
+bat "mvn test"
 }
 }
 stage('Integration Test') {
