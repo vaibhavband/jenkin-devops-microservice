@@ -10,7 +10,7 @@ agent any
 
 stages {
 
-stage('build'){
+stage('checkout'){
 steps {
 bat 'mvn --version'
 bat 'docker version'
@@ -26,14 +26,20 @@ echo "BUILD TAG -$env.BUILD_TAG"
 echo "build"
 }
 }
+stage('build') {
+steps {
+ bat mvn clean compile 
+}
+}
 stage('Test') {
 steps {
-echo "Test"
+bat mvn test
 }
 }
 stage('Integration Test') {
 steps {
 echo "Integration Test"
+bat "mvn failsafe: integration-test failsafe:verify "
 }
 }
 }
