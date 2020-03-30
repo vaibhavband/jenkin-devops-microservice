@@ -66,7 +66,7 @@ steps {
 script {
 docker.withRegistry ('','dockerHub'){
 dockerimage.push();
-dockerimage.push(latest);
+dockerimage.push('latest');
 }
 }
 }
