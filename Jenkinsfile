@@ -43,6 +43,12 @@ echo "Integration Test"
 //bat "mvn failsafe: integration-test failsafe:verify "
 }
 }
+stage('Package') {
+steps {
+  bat "mvn Package -DskipTests"
+//bat "mvn test"
+}
+}
 stage('build docker image') {
 steps {
 echo "Integration Test"
