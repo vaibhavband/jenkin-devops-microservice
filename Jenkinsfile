@@ -55,7 +55,7 @@ echo "Integration Test"
 //docker build -t vaibhavband/currency-exchange-devops:${env.BUILD_TAG}
 script {
 
-docker image=docker.build("vaibhavband/currency-exchange-devops:${env.BUILD_TAG} ")
+dockerimage=docker.build("vaibhavband/currency-exchange-devops:${env.BUILD_TAG} ")
 
 }
 }
