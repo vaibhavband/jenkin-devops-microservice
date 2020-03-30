@@ -64,7 +64,7 @@ stage('push docker image') {
 steps {
 
 script {
-docker.withRegistry ('','dockerhub'){
+docker.withRegistry ('','dockerHub'){
 dockerimage.push();
 dockerimage.push(latest);
 }
