@@ -52,6 +52,8 @@ script {
 docker image=docker.build("vaibhavband/currency-exchange-devops:${env.BUILD_TAG} ")
 
 }
+}
+}
 stage('push docker image') {
 steps {
 
