@@ -40,7 +40,7 @@ steps {
 stage('Integration Test') {
 steps {
 echo "Integration Test"
-bat "mvn failsafe: integration-test failsafe:verify "
+//bat "mvn failsafe: integration-test failsafe:verify "
 }
 }
 stage('build docker image') {
