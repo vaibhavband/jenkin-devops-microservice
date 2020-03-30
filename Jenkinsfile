@@ -12,8 +12,8 @@ stages {
 
 stage('build'){
 steps {
-sh 'mvn --version'
-sh 'docker version'
+bat 'mvn --version'
+bat 'docker version'
 
 echo "Build"
 echo "$PATH"
