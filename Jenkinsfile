@@ -45,7 +45,7 @@ echo "Integration Test"
 }
 stage('Package') {
 steps {
-  bat "mvn Package -DskipTests"
+  bat "mvn package -DskipTests"
 //bat "mvn test"
 }
 }
