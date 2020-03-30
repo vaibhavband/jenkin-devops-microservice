@@ -33,13 +33,33 @@ steps {
 }
 stage('Test') {
 steps {
-bat "mvn test"
+  echo "Integration Test"
+//bat "mvn test"
 }
 }
 stage('Integration Test') {
 steps {
 echo "Integration Test"
 bat "mvn failsafe: integration-test failsafe:verify "
+}
+}
+stage('build docker image') {
+steps {
+echo "Integration Test"
+//docker build -t vaibhavband/currency-exchange-devops:${env.BUILD_TAG}
+script {
+
+docker image=docker.build("vaibhavband/currency-exchange-devops:${env.BUILD_TAG} ")
+
+}
+stage('push docker image') {
+steps {
+
+script {
+
+dockerimage.push();
+dockerimage.push(latest);
+}
 }
 }
 }
